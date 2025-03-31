@@ -1,0 +1,283 @@
+/* Style the logout button differently for visibility */
+#logoutBtn {
+  background-color: #f44336 !important; /* Red color */
+  margin-left: 10px;
+}
+#logoutBtn:hover {
+  background-color: #d32f2f !important;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes blinkBox {
+  0% { background-color: yellow; }
+  50% { background-color: transparent; }
+  100% { background-color: yellow; }
+}
+
+.blink {
+  animation: blinkBox 0.5s infinite alternate;
+}
+
+.top-right-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+.auth-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease-in-out; background-color 0.3s;
+}
+/* Glow effect when hovered */
+.auth-button:hover {
+    background-color: #666;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 1), 0 0 25px rgba(255, 255, 0, 0.7);
+}
+
+/* Glow effect when clicked */
+.auth-button:active {
+    background-color: #888;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.9);
+}
+
+
+.balance-box {
+    background-color: #296E01;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.denomination-container {
+    position: fixed;
+    bottom: 30vh; /* Moves chips up or down without affecting other elements */
+    left: 68vw;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.chip {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+
+  .chip:hover, .chip.selected {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  }
+
+@keyframes blinkGlow {
+  0% { opacity: 1; text-shadow: 0 0 10px rgba(255, 215, 0, 1); }
+  50% { opacity: 0.5; text-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+  100% { opacity: 1; text-shadow: 0 0 10px rgba(255, 215, 0, 1); }
+}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+.plinkonic-title {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif; /* Fun arcade font */
+  color: #FFD700; /* Gold color */
+  text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.8);
+  animation: blinkGlow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.8); }
+  100% { text-shadow: 5px 5px 15px rgba(255, 215, 0, 1); }
+}
+
+.deposit-button {
+  background-color: #4CAF50; /* green */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deposit-button:hover {
+  background-color: #00FF00; /* Bright green */
+}
+
+.withdraw-button {
+  background-color: #F57C00; /* orange */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.withdraw-button:hover {
+  background-color: #FF9800; /* bright orange */
+}
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      background: #2a0033;
+    }
+
+.game-info {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  width: 12vw;
+ min-width: 150px
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.game-info h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #000;
+}
+
+.game-info button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.score-display {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bet-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bet-controls button {
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+}
+
+    .game-container {
+      text-align: center;
+    }
+    .plinko-board {
+      position: relative;
+      width: 800px;
+      height: 530px;
+      background-color: #00008B;
+      margin: 20px auto;
+      border: 5px solid #FFD700;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px #FFD700, 0 0 30px #FFA500;
+    }
+    .peg {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+    .ball {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    #dropButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    #dropButton:hover {
+      background-color: #45a049;
+    }
+    .boxes-container {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+    .box {
+      width: 40px;
+      height: 40px;
+      background-color: #ccc;
+      border: 2px solid #555;
+      margin: 0 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+    .box.highlight {
+    background-color: yellow !important;
+    color: black !important;
+}
+
+    .border-line {
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      background-color: red;
+    }
+    .border-left {
+      left: 0;
+    }
+    .border-right {
+      right: 320px;
+    }
+
+.zero-balance {
+  animation: pulseWarning 1s infinite;
+  background-color: #ff4444 !important;
+}
+@keyframes pulseWarning {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}

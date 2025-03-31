@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plinko Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Auth Modals -->
+<div id="authModals" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000;">
+  <div style="background:#2a0033; padding:20px; width:300px; margin:100px auto; border:2px solid #FFD700;">
+    <h2 style="color:#FFD700;" id="authModalTitle">Login</h2>
+    <input type="text" id="authUsername" placeholder="Username" style="width:100%; padding:8px; margin:5px 0;">
+    <input type="password" id="authPassword" placeholder="Password" style="width:100%; padding:8px; margin:5px 0;">
+    <button id="authActionBtn" style="width:100%; padding:10px; margin:5px 0; background:#4CAF50;">Login</button>
+    <button onclick="hideAuthModal()" style="width:100%; padding:10px; margin:5px 0; background:#f44336;">Cancel</button>
+  </div>
+</div>
+
+  <div class="game-container">
+    <div class="plinko-board" id="plinkoBoard">
+    <div class="plinkonic-title">PLINKONIC</div>
+      <div class="border-line border-left"></div>
+      <div class="border-line border-right"></div>
+    </div>
+
+ <div class="game-info">
+        <button class="deposit-button">Deposit</button>
+    <button class="withdraw-button">Withdraw</button>
+    <div class="score-display">Total Win: <span id="totalScore">0</span></div>
+    <div class="betting-controls">
+      <button id="plusBet">+</button>
+      <div class="bet-amount" id="betAmount">0</div>
+      <button id="minusBet">-</button>
+    </div>
+  </div>
+
+<div class="denomination-container">
+    <div class="chip" data-value="10" style="background-color: #0000ff;">10</div>
+  <div class="chip" data-value="20" style="background-color: #008000;">20</div>
+  <div class="chip" data-value="50" style="background-color: #ffa500;">50</div>
+  <div class="chip" data-value="100" style="background-color: #800080;">100</div>
+</div>
+
+    <div class="boxes-container" id="boxesContainer"></div>
+    <button id="dropButton">Drop Ball</button>
+  </div>
+
+<div class="top-right-container">
+    <button class="auth-button" id="signupBtn">Sign Up</button>
+    <button class="auth-button" id="loginBtn">Login</button>
+<button class="auth-button" id="logoutBtn" style="display: none;" onclick="logout()">Logout</button>
+    <div class="balance-box">Balance: <span id="balanceAmount">0.00</span></div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
